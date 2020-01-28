@@ -26,17 +26,18 @@ ext {
     room_version = "2.2.2"
 
     base = [
-            kotlinJDK        : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            kotlinReflect    : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
-            lifecycle        : "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
-            lifecycleKtx     : "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha03",
-            lifecycleRuntime : "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha01",
-            appcompat        : "androidx.appcompat:appcompat:$androidx_version",
-            material         : "com.google.android.material:material:1.0.0",
-            paging           : "androidx.paging:paging-runtime-ktx:2.1.0",
-            constraintlayout : "androidx.constraintlayout:constraintlayout:$constraint_version",
-            coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
-            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+            kotlinJDK         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlinReflect     : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
+            lifecycle         : "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
+            lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            lifecycleKtx      : "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha03",
+            lifecycleRuntime  : "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha01",
+            appcompat         : "androidx.appcompat:appcompat:$androidx_version",
+            material          : "com.google.android.material:material:1.0.0",
+            paging            : "androidx.paging:paging-runtime-ktx:2.1.0",
+            constraintlayout  : "androidx.constraintlayout:constraintlayout:$constraint_version",
+            coroutinesCore    : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+            coroutinesAndroid : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     ]
 
     test = [

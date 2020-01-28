@@ -12,10 +12,17 @@ def depends = [
         [configuration: "implementation", dependency: base.material],
         [configuration: "implementation", dependency: base.constraintlayout],
         [configuration: "implementation", dependency: base.lifecycle],
+        [configuration: "implementation", dependency: base.lifecycleViewModel],
         [configuration: "implementation", dependency: base.lifecycleKtx],
 
         [configuration: "implementation", dependency: base.coroutinesCore],
         [configuration: "implementation", dependency: base.coroutinesAndroid],
+
+        [configuration: "implementation", dependency: room.runtime],
+        [configuration: "kapt", dependency: room.compiler],
+        [configuration: "implementation", dependency: room.ktx],
+
+        [configuration: "implementation", dependency: other.ezpermission],
 
         [configuration: "implementation", dependency: kodein.generic],
         [configuration: "implementation", dependency: kodein.framework]
@@ -29,10 +36,20 @@ android {
     dataBinding {
         enabled = true
     }
+
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
     depends.each {
         add(it.configuration, it.dependency, it.options)
     }
+
+    implementation('com.google.android.gms:play-services:11.0.0') {
+        exclude group: 'com.google.firebase', module: 'firebase-common'
+    }
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.2.1")
 }

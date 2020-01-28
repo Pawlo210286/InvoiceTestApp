@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="invoice_list">Invoice List</string>
+    <string name="items_not_found">Items not found…</string>
+    <string name="update">Update</string>
+    <string name="balance">$%s</string>
+    <string name="late">Late</string>
+    <string name="open">Open</string>
+    <string name="paid">Paid</string>
+    <string name="warning">Warning</string>
+    <string name="warning_message">To use app you need to approve permission</string>
+
 </resources>
