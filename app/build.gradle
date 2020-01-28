@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: "${rootDir}/config/appConfig.gradle"
+
+def depends = [
+        [configuration: "implementation", dependency: base.kotlinJDK],
+        [configuration: "implementation", dependency: base.appcompat],
+        [configuration: "implementation", dependency: base.material],
+        [configuration: "implementation", dependency: base.constraintlayout],
+        [configuration: "implementation", dependency: base.lifecycle],
+        [configuration: "implementation", dependency: base.lifecycleKtx],
+
+        [configuration: "implementation", dependency: base.coroutinesCore],
+        [configuration: "implementation", dependency: base.coroutinesAndroid],
+
+        [configuration: "implementation", dependency: kodein.generic],
+        [configuration: "implementation", dependency: kodein.framework]
+]
+
+android {
+    defaultConfig {
+        applicationId "test.test.inv"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    depends.each {
+        add(it.configuration, it.dependency, it.options)
+    }
+}
